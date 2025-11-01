@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Aptos Platform</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      background: white;
+      padding: 20px 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .header-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-title h1 {
+      font-size: 28px;
+      color: #1e293b;
+    }
+
+    .btn-logout {
+      background: #ef4444;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .btn-logout:hover {
+      background: #dc2626;
+      transform: translateY(-2px);
+    }
+
+    /* Platform Balance Card */
+    .balance-card {
+      background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+      color: white;
+      padding: 30px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+    }
+
+    .balance-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .balance-title {
+      font-size: 18px;
+      opacity: 0.95;
+    }
+
+    .btn-refresh {
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
+      transition: all 0.2s;
+    }
+
+    .btn-refresh:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .balance-amount {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .balance-octas {
+      opacity: 0.9;
+      margin-bottom: 15px;
+    }
+
+    .platform-address {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 12px;
+      border-radius: 8px;
+      font-family: monospace;
+      font-size: 12px;
+      word-break: break-all;
+    }
+
+    /* Tabs */
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0;
+    }
+
+    .tab {
+      background: none;
+      border: none;
+      padding: 12px 24px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 600;
+      color: #64748b;
+      border-bottom: 3px solid transparent;
+      transition: all 0.2s;
+      margin-bottom: -2px;
+    }
+
+    .tab.active {
+      color: #3b82f6;
+      border-bottom-color: #3b82f6;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    /* Cards */
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      margin-bottom: 20px;
+    }
+
+    .card-title {
+      font-size: 20px;
+      color: #1e293b;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card-description {
+      color: #64748b;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
+    /* Form */
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #334155;
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px 16px;
+      border: 2px solid #e2e8f0;
+      border-radius: 8px;
+      font-size: 15px;
+      transition: all 0.2s;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+
+    .hint {
+      font-size: 12px;
+      color: #64748b;
+      margin-top: 4px;
+    }
+
+    .btn-primary {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+    }
+
+    .btn-primary:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* Result Box */
+    .result-box {
+      margin-top: 20px;
+      padding: 16px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .result-box.success {
+      background: #dcfce7;
+      border: 1px solid #86efac;
+      color: #166534;
+    }
+
+    .result-box.error {
+      background: #fee2e2;
+      border: 1px solid #fca5a5;
+      color: #991b1b;
+    }
+
+    .result-box h4 {
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+
+    .result-box a {
+      color: #3b82f6;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .result-box a:hover {
+      text-decoration: underline;
+    }
+
+    /* Balance Result */
+    .balance-result {
+      margin-top: 20px;
+      background: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%);
+      border: 2px solid #bfdbfe;
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .balance-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .balance-item {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .balance-label {
+      font-size: 12px;
+      color: #64748b;
+      margin-bottom: 4px;
+    }
+
+    .balance-value {
+      font-size: 24px;
+      font-weight: bold;
+      color: #3b82f6;
+    }
+
+    .address-display {
+      background: white;
+      padding: 12px;
+      border-radius: 8px;
+      font-family: monospace;
+      font-size: 11px;
+      word-break: break-all;
+      margin-top: 12px;
+    }
+
+    /* Stats */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .stat-card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: #64748b;
+      margin-bottom: 8px;
+    }
+
+    .stat-value {
+      font-size: 24px;
+      font-weight: bold;
+      color: #1e293b;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .status-dot {
+      width: 12px;
+      height: 12px;
+      background: #22c55e;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    .loading {
+      display: inline-block;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @media (max-width: 768px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .balance-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <div class="header-title">
+        <span style="font-size: 32px;">🛡️</span>
+        <div>
+          <h1>Admin Dashboard</h1>
+          <p style="color: #64748b; font-size: 14px;">Manage platform operations and transactions</p>
+        </div>
+      </div>
+      <form action="/admin/logout" method="POST" style="margin: 0;">
+        <button type="submit" class="btn-logout">🚪 Logout</button>
+      </form>
+    </div>
+
+    <!-- Platform Balance -->
+    <div class="balance-card">
+      <div class="balance-header">
+        <h2 class="balance-title">💰 Platform Wallet Balance</h2>
+        <button class="btn-refresh" onclick="window.location.reload()">🔄 Refresh</button>
+      </div>
+      <div class="balance-amount">
+        <%= platformBalance ? platformBalance.balance_APT.toFixed(4) : '0.0000' %> APT
+      </div>
+      <div class="balance-octas">
+        <%= platformBalance ? platformBalance.balance_octas.toLocaleString() : '0' %> octas
+      </div>
+      <div class="platform-address">
+        <strong>Platform Address:</strong><br>
+        <%= platformAddress %>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab active" onclick="switchTab('transfer')">↔️ Transfer</button>
+      <button class="tab" onclick="switchTab('balance')">💰 Check Balance</button>
+      <button class="tab" onclick="switchTab('reward')">🎁 Send Reward</button>
+    </div>
+
+    <!-- Transfer Tab -->
+    <div id="transfer-tab" class="tab-content active">
+      <div class="card">
+        <h2 class="card-title">↔️ Transfer Between Accounts</h2>
+        <p class="card-description">Transfer APT from one user account to another</p>
+        
+        <form action="/admin/transfer" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="userId">User ID (Sender)</label>
+              <input type="text" id="userId" name="userId" placeholder="Enter sender's user ID" required>
+            </div>
+            <div class="form-group">
+              <label for="receiverAddress">Receiver Address</label>
+              <input type="text" id="receiverAddress" name="receiverAddress" placeholder="0x..." required>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="amount">Amount (in octas)</label>
+            <input type="number" id="amount" name="amount" placeholder="100000000" required>
+            <p class="hint">1 APT = 100,000,000 octas</p>
+          </div>
+
+          <button type="submit" class="btn-primary">📤 Execute Transfer</button>
+        </form>
+
+        <% if (transferResult) { %>
+          <div class="result-box <%= transferResult.success ? 'success' : 'error' %>">
+            <% if (transferResult.success) { %>
+              <h4>✅ Transfer Successful!</h4>
+              <p><strong>Transaction Hash:</strong> <%= transferResult.hash %></p>
+              <a href="<%= transferResult.explorer %>" target="_blank">View on Explorer →</a>
+            <% } else { %>
+              <h4>❌ Transfer Failed</h4>
+              <p><%= transferResult.error %></p>
+            <% } %>
+          </div>
+        <% } %>
+      </div>
+    </div>
+
+    <!-- Balance Tab -->
+    <div id="balance-tab" class="tab-content">
+      <div class="card">
+        <h2 class="card-title">💰 Check Account Balance</h2>
+        <p class="card-description">Query the APT balance of any Aptos address</p>
+        
+        <form action="/admin/check-balance" method="POST">
+          <div class="form-group">
+            <label for="checkAddress">Wallet Address</label>
+            <input type="text" id="checkAddress" name="address" placeholder="0x..." required>
+          </div>
+
+          <button type="submit" class="btn-primary">🔍 Check Balance</button>
+        </form>
+
+        <% if (balanceResult) { %>
+          <div class="balance-result">
+            <p class="balance-label">Address:</p>
+            <div class="address-display"><%= balanceResult.address %></div>
+            
+            <div class="balance-grid">
+              <div class="balance-item">
+                <div class="balance-label">Balance (APT)</div>
+                <div class="balance-value"><%= balanceResult.balance_APT.toFixed(4) %></div>
+              </div>
+              <div class="balance-item">
+                <div class="balance-label">Balance (Octas)</div>
+                <div class="balance-value"><%= balanceResult.balance_octas.toLocaleString() %></div>
+              </div>
+            </div>
+          </div>
+        <% } %>
+      </div>
+    </div>
+
+    <!-- Reward Tab -->
+    <div id="reward-tab" class="tab-content">
+      <div class="card">
+        <h2 class="card-title">🎁 Send Reward to Researcher</h2>
+        <p class="card-description">Transfer rewards from platform to researcher using Move module</p>
+        
+        <form action="/admin/reward" method="POST">
+          <div class="form-group">
+            <label for="rewardReceiver">Researcher Address</label>
+            <input type="text" id="rewardReceiver" name="receiver" placeholder="0x..." required>
+          </div>
+
+          <div class="form-group">
+            <label for="rewardAmount">Reward Amount (in octas)</label>
+            <input type="number" id="rewardAmount" name="amount" placeholder="100000000" required>
+            <p class="hint">1 APT = 100,000,000 octas</p>
+          </div>
+
+          <div class="form-group">
+            <label for="reason">Reason (Optional)</label>
+            <input type="text" id="reason" name="reason" placeholder="e.g., Bias detection reward">
+          </div>
+
+          <button type="submit" class="btn-primary">🎁 Send Reward</button>
+        </form>
+
+        <% if (rewardResult) { %>
+          <div class="result-box <%= rewardResult.success ? 'success' : 'error' %>">
+            <% if (rewardResult.success) { %>
+              <h4>✅ Reward Sent Successfully! 🎉</h4>
+              <p><strong>Transaction Hash:</strong> <%= rewardResult.hash %></p>
+              <a href="<%= rewardResult.explorer %>" target="_blank">View on Explorer →</a>
+            <% } else { %>
+              <h4>❌ Reward Transfer Failed</h4>
+              <p><%= rewardResult.error %></p>
+            <% } %>
+          </div>
+        <% } %>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-label">Platform Status</div>
+        <div class="stat-value">
+          <span class="status-dot"></span>
+          Online
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Network</div>
+        <div class="stat-value">Aptos Testnet</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Admin Access</div>
+        <div class="stat-value">🛡️ Full Control</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function switchTab(tabName) {
+      // Hide all tabs
+      document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.classList.remove('active');
+      });
+      
+      // Remove active class from all tab buttons
+      document.querySelectorAll('.tab').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      
+      // Show selected tab
+      document.getElementById(tabName + '-tab').classList.add('active');
+      
+      // Add active class to clicked button
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>

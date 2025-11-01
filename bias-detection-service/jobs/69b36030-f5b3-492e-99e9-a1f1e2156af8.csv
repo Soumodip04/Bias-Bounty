@@ -1,0 +1,31 @@
+patient_id,age,gender,ethnicity,diagnosis,treatment,readmission,insurance_type,severity_score
+P028,66,Male,White,Cancer,Chemotherapy,1,Medicare,9
+P016,72,Male,Black,Cancer,Chemotherapy,1,Medicare,10
+P024,70,Male,White,Cancer,Surgery,1,Medicare,9
+P018,60,Male,White,Hypertension,Medication,1,Medicare,5
+P009,50,Female,Asian,Diabetes,Medication,0,Private,3
+P010,55,Male,Black,Hypertension,Medication,1,Medicaid,6
+P029,53,Female,Black,Diabetes,Medication,0,Medicaid,3
+P025,45,Female,Asian,Diabetes,Medication,0,Private,3
+P013,46,Female,Black,Diabetes,Medication,0,Medicaid,3
+P001,65,Female,White,Diabetes,Medication,0,Private,3
+P005,44,Female,White,Diabetes,Lifestyle,0,Private,2
+P017,47,Female,Hispanic,Diabetes,Lifestyle,0,Private,2
+P006,58,Male,Black,Heart Disease,Surgery,1,Medicaid,8
+P014,63,Male,White,Heart Disease,Surgery,1,Private,7
+P012,69,Male,Hispanic,Cancer,Surgery,1,Medicare,9
+P023,41,Female,Black,Hypertension,Medication,0,Medicaid,4
+P002,52,Male,Black,Hypertension,Surgery,1,Medicare,7
+P003,48,Female,Hispanic,Heart Disease,Medication,0,Private,5
+P026,59,Male,Black,Heart Disease,Medication,1,Medicaid,6
+P004,71,Male,Asian,Cancer,Chemotherapy,1,Medicare,9
+P022,56,Male,Hispanic,Heart Disease,Surgery,1,Medicare,7
+P027,40,Female,Hispanic,Hypertension,Lifestyle,0,Private,2
+P019,43,Female,Black,Heart Disease,Medication,0,Medicaid,4
+P030,61,Male,Asian,Hypertension,Medication,1,Private,5
+P021,49,Female,White,Diabetes,Medication,0,Private,3
+P008,67,Male,White,Cancer,Radiation,1,Medicare,9
+P011,42,Female,White,Heart Disease,Medication,0,Private,4
+P015,51,Female,Asian,Hypertension,Medication,0,Private,4
+P020,68,Male,Asian,Cancer,Radiation,1,Medicare,9
+P007,39,Female,Hispanic,Hypertension,Medication,0,Private,4

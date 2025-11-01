@@ -1,0 +1,31 @@
+defendant_id,age,gender,race,offense_type,criminal_history,bail_set,bail_amount,judge_id,county
+D001,28,Male,White,Theft,1,1,5000,J1,Urban
+D002,35,Male,Black,Assault,2,1,25000,J2,Urban
+D003,42,Female,Hispanic,Drug Possession,0,1,2000,J1,Suburban
+D004,31,Male,Asian,Fraud,1,1,10000,J3,Urban
+D005,26,Male,Black,Theft,2,1,20000,J2,Urban
+D006,45,Female,White,Assault,1,1,8000,J1,Suburban
+D007,38,Male,Hispanic,Drug Possession,3,1,30000,J3,Urban
+D008,29,Female,White,Fraud,0,0,0,J1,Suburban
+D009,33,Male,Black,Assault,2,1,22000,J2,Urban
+D010,41,Female,Asian,Theft,1,1,6000,J3,Suburban
+D011,27,Male,White,Drug Possession,1,1,3000,J1,Urban
+D012,36,Male,Black,Fraud,3,1,35000,J2,Urban
+D013,44,Female,Hispanic,Assault,1,1,9000,J1,Suburban
+D014,30,Male,White,Theft,0,0,0,J3,Suburban
+D015,32,Male,Black,Drug Possession,2,1,18000,J2,Urban
+D016,46,Female,White,Fraud,1,1,11000,J1,Suburban
+D017,39,Male,Hispanic,Assault,2,1,24000,J3,Urban
+D018,28,Female,Asian,Theft,1,1,5500,J1,Urban
+D019,34,Male,Black,Drug Possession,3,1,28000,J2,Urban
+D020,43,Female,White,Fraud,0,0,0,J3,Suburban
+D021,29,Male,Hispanic,Assault,1,1,12000,J1,Urban
+D022,37,Male,Black,Theft,2,1,21000,J2,Urban
+D023,45,Female,White,Drug Possession,1,1,4000,J1,Suburban
+D024,31,Male,Asian,Fraud,1,1,10500,J3,Urban
+D025,26,Male,Black,Assault,2,1,23000,J2,Urban
+D026,40,Female,Hispanic,Theft,1,1,7000,J1,Suburban
+D027,33,Male,White,Drug Possession,0,1,2500,J3,Suburban
+D028,35,Male,Black,Fraud,3,1,32000,J2,Urban
+D029,42,Female,White,Assault,1,1,8500,J1,Suburban
+D030,30,Male,Hispanic,Theft,2,1,19000,J3,Urban

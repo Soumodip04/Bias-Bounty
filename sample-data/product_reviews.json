@@ -1,0 +1,202 @@
+[
+  {
+    "review_id": 1,
+    "product_name": "Smartphone X",
+    "reviewer_name": "John D.",
+    "rating": 5,
+    "review_text": "This phone is absolutely amazing! The camera quality is outstanding and the battery life is incredible. Highly recommend!",
+    "reviewer_age": 35,
+    "reviewer_gender": "Male",
+    "purchase_verified": true
+  },
+  {
+    "review_id": 2,
+    "product_name": "Smartphone X",
+    "reviewer_name": "Sarah M.",
+    "rating": 2,
+    "review_text": "I'm really disappointed with this phone. The interface is too complicated for someone like me to understand. Not user-friendly at all.",
+    "reviewer_age": 67,
+    "reviewer_gender": "Female",
+    "purchase_verified": true
+  },
+  {
+    "review_id": 3,
+    "product_name": "Gaming Laptop Pro",
+    "reviewer_name": "Mike R.",
+    "rating": 5,
+    "review_text": "Perfect for serious gaming! This beast can handle any game I throw at it. Real men need real machines!",
+    "reviewer_age": 24,
+    "reviewer_gender": "Male",
+    "purchase_verified": true
+  },
+  {
+    "review_id": 4,
+    "product_name": "Gaming Laptop Pro",
+    "reviewer_name": "Emily K.",
+    "rating": 4,
+    "review_text": "Great performance, though I mainly use it for work and some light gaming. The design could be less aggressive.",
+    "reviewer_age": 29,
+    "reviewer_gender": "Female",
+    "purchase_verified": true
+  },
+  {
+    "review_id": 5,
+    "product_name": "Smart Home Assistant",
+    "reviewer_name": "Robert L.",
+    "rating": 1,
+    "review_text": "This thing is useless! Can't understand my accent at all. Waste of money for people like me.",
+    "reviewer_age": 58,
+    "reviewer_gender": "Male",
+    "purchase_verified": true
+  },
+  {
+    "review_id": 6,
+    "product_name": "Smart Home Assistant",
+    "reviewer_name": "Lisa W.",
+    "rating": 5,
+    "review_text": "Love how it helps me manage my household! Perfect for busy moms who need to multitask.",
+    "reviewer_age": 34,
+    "reviewer_gender": "Female",
+    "purchase_verified": true
+  },
+  {
+    "review_id": 7,
+    "product_name": "Fitness Tracker Elite",
+    "reviewer_name": "David C.",
+    "rating": 5,
+    "review_text": "Excellent for tracking my workouts. Real athletes need precise data, and this delivers!",
+    "reviewer_age": 28,
+    "reviewer_gender": "Male",
+    "purchase_verified": true
+  },
+  {
+    "review_id": 8,
+    "product_name": "Fitness Tracker Elite",
+    "reviewer_name": "Jennifer S.",
+    "rating": 3,
+    "review_text": "It's okay for my yoga and walking routine. Wish it had more feminine color options though.",
+    "reviewer_age": 42,
+    "reviewer_gender": "Female",
+    "purchase_verified": true
+  },
+  {
+    "review_id": 9,
+    "product_name": "Professional Camera",
+    "reviewer_name": "Alex T.",
+    "rating": 4,
+    "review_text": "Great camera for professional work. The manual controls are comprehensive, though beginners might find it overwhelming.",
+    "reviewer_age": 31,
+    "reviewer_gender": "Male",
+    "purchase_verified": true
+  },
+  {
+    "review_id": 10,
+    "product_name": "Professional Camera",
+    "reviewer_name": "Maria G.",
+    "rating": 2,
+    "review_text": "Too complicated for me. I just wanted something simple to take nice family photos. This is clearly made for men who understand technical stuff.",
+    "reviewer_age": 45,
+    "reviewer_gender": "Female",
+    "purchase_verified": true
+  },
+  {
+    "review_id": 11,
+    "product_name": "Wireless Headphones",
+    "reviewer_name": "Chris P.",
+    "rating": 5,
+    "review_text": "Incredible sound quality! Perfect for my music production work. These are professional-grade headphones.",
+    "reviewer_age": 26,
+    "reviewer_gender": "Male",
+    "purchase_verified": true
+  },
+  {
+    "review_id": 12,
+    "product_name": "Wireless Headphones",
+    "reviewer_name": "Amanda R.",
+    "rating": 4,
+    "review_text": "Good sound quality, though I mainly use them for podcasts and audiobooks. The design is a bit too bulky for my taste.",
+    "reviewer_age": 33,
+    "reviewer_gender": "Female",
+    "purchase_verified": true
+  },
+  {
+    "review_id": 13,
+    "product_name": "Smart Watch Pro",
+    "reviewer_name": "Kevin M.",
+    "rating": 5,
+    "review_text": "This watch is a powerhouse! All the features a tech-savvy guy could want. Definitely not for casual users.",
+    "reviewer_age": 32,
+    "reviewer_gender": "Male",
+    "purchase_verified": true
+  },
+  {
+    "review_id": 14,
+    "product_name": "Smart Watch Pro",
+    "reviewer_name": "Rachel B.",
+    "rating": 3,
+    "review_text": "It's functional but feels too masculine and heavy on my wrist. Would prefer something more elegant and lightweight.",
+    "reviewer_age": 27,
+    "reviewer_gender": "Female",
+    "purchase_verified": true
+  },
+  {
+    "review_id": 15,
+    "product_name": "Tablet Ultra",
+    "reviewer_name": "Steven H.",
+    "rating": 4,
+    "review_text": "Solid performance for work and entertainment. The processing power is impressive for demanding applications.",
+    "reviewer_age": 39,
+    "reviewer_gender": "Male",
+    "purchase_verified": true
+  },
+  {
+    "review_id": 16,
+    "product_name": "Tablet Ultra",
+    "reviewer_name": "Nancy D.",
+    "rating": 5,
+    "review_text": "Perfect for reading, browsing, and staying connected with family. Easy to use and not too heavy to hold.",
+    "reviewer_age": 52,
+    "reviewer_gender": "Female",
+    "purchase_verified": true
+  },
+  {
+    "review_id": 17,
+    "product_name": "VR Headset Advanced",
+    "reviewer_name": "Tyler J.",
+    "rating": 5,
+    "review_text": "Mind-blowing VR experience! This is the future of gaming and entertainment. Every guy should have one of these!",
+    "reviewer_age": 22,
+    "reviewer_gender": "Male",
+    "purchase_verified": true
+  },
+  {
+    "review_id": 18,
+    "product_name": "VR Headset Advanced",
+    "reviewer_name": "Olivia F.",
+    "rating": 2,
+    "review_text": "Made me feel nauseous and gave me a headache. Maybe VR just isn't for everyone, especially women who are more sensitive to motion.",
+    "reviewer_age": 25,
+    "reviewer_gender": "Female",
+    "purchase_verified": true
+  },
+  {
+    "review_id": 19,
+    "product_name": "Bluetooth Speaker",
+    "reviewer_name": "Marcus W.",
+    "rating": 4,
+    "review_text": "Great bass and volume for parties. This speaker can really pump out the sound when you need it loud!",
+    "reviewer_age": 30,
+    "reviewer_gender": "Male",
+    "purchase_verified": true
+  },
+  {
+    "review_id": 20,
+    "product_name": "Bluetooth Speaker",
+    "reviewer_name": "Grace L.",
+    "rating": 5,
+    "review_text": "Perfect for background music while cooking or relaxing. The sound quality is clear and it's not too overwhelming.",
+    "reviewer_age": 36,
+    "reviewer_gender": "Female",
+    "purchase_verified": true
+  }
+]

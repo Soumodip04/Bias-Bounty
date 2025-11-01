@@ -1,0 +1,21 @@
+# FastAPI and Server
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+
+# Data Processing (use latest compatible versions)
+numpy
+pandas
+openpyxl
+
+# Machine Learning and NLP (CPU-only PyTorch for faster installation)
+transformers
+torch
+sentencepiece
+
+# HTTP Requests
+requests
+
+# Additional dependencies
+pydantic
+python-dotenv

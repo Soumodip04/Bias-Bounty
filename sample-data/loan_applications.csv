@@ -1,0 +1,21 @@
+application_id,applicant_name,age,gender,race,income,credit_score,loan_amount,employment_status,education,marital_status,loan_approved
+1,John Anderson,35,Male,White,75000,720,250000,Employed,Masters,Married,Yes
+2,Maria Rodriguez,28,Female,Hispanic,45000,680,180000,Employed,Bachelors,Single,No
+3,David Kim,42,Male,Asian,95000,750,320000,Employed,PhD,Married,Yes
+4,Sarah Johnson,31,Female,White,68000,700,200000,Employed,Masters,Married,Yes
+5,Michael Brown,39,Male,Black,52000,650,150000,Employed,Bachelors,Single,No
+6,Lisa Chen,26,Female,Asian,58000,690,175000,Employed,Masters,Single,Yes
+7,Robert Williams,45,Male,White,85000,740,280000,Employed,Masters,Married,Yes
+8,Jennifer Davis,33,Female,Black,41000,620,120000,Employed,Bachelors,Single,No
+9,Christopher Lee,37,Male,Asian,78000,710,230000,Employed,Masters,Married,Yes
+10,Amanda Garcia,29,Female,Hispanic,38000,640,110000,Employed,Bachelors,Single,No
+11,James Wilson,41,Male,White,92000,760,300000,Self-Employed,Masters,Married,Yes
+12,Michelle Martinez,34,Female,Hispanic,55000,670,160000,Employed,Bachelors,Married,No
+13,William Taylor,38,Male,Black,48000,630,140000,Employed,Bachelors,Single,No
+14,Jessica Thompson,27,Female,White,62000,695,185000,Employed,Masters,Single,Yes
+15,Daniel Jackson,43,Male,White,88000,730,270000,Employed,Masters,Married,Yes
+16,Ashley Moore,30,Female,Black,44000,610,125000,Employed,Bachelors,Single,No
+17,Matthew Lopez,36,Male,Hispanic,71000,705,210000,Employed,Masters,Married,Yes
+18,Stephanie White,32,Female,White,66000,715,195000,Employed,Masters,Married,Yes
+19,Andrew Hernandez,40,Male,Hispanic,59000,665,170000,Employed,Bachelors,Married,No
+20,Nicole Martin,25,Female,Asian,51000,675,155000,Employed,Bachelors,Single,Yes

@@ -1,0 +1,21 @@
+employee_id,name,gender,age,department,salary,performance_rating,years_experience,education_level
+1,John Smith,Male,35,Engineering,95000,4.2,8,Masters
+2,Sarah Johnson,Female,28,Engineering,75000,4.5,5,Masters
+3,Michael Brown,Male,42,Engineering,110000,4.0,15,PhD
+4,Emily Davis,Female,31,Engineering,78000,4.3,6,Masters
+5,David Wilson,Male,39,Engineering,105000,4.1,12,Masters
+6,Lisa Anderson,Female,26,Marketing,55000,4.4,3,Bachelors
+7,Robert Taylor,Male,45,Marketing,85000,3.9,18,Masters
+8,Jennifer White,Female,33,Marketing,62000,4.2,7,Bachelors
+9,Christopher Lee,Male,37,Sales,78000,4.0,10,Bachelors
+10,Amanda Garcia,Female,29,Sales,58000,4.3,4,Bachelors
+11,James Martinez,Male,41,Sales,88000,3.8,14,Bachelors
+12,Michelle Rodriguez,Female,34,HR,65000,4.1,8,Masters
+13,William Lopez,Male,38,HR,75000,3.9,11,Masters
+14,Jessica Gonzalez,Female,27,HR,52000,4.4,2,Bachelors
+15,Daniel Hernandez,Male,43,Finance,92000,4.0,16,Masters
+16,Ashley Moore,Female,30,Finance,68000,4.2,5,Masters
+17,Matthew Jackson,Male,36,Finance,85000,3.9,9,Masters
+18,Stephanie Martin,Female,32,Engineering,82000,4.3,7,Masters
+19,Andrew Thompson,Male,40,Engineering,98000,4.1,13,Masters
+20,Nicole White,Female,25,Marketing,48000,4.5,1,Bachelors

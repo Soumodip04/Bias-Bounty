@@ -1,0 +1,21 @@
+applicant_id,name,age,gender,ethnicity,education,years_experience,skills_score,interview_score,hired,salary_offered
+A018,Samantha Moore,26,Female,White,Masters,3,86,84,1,91000
+A025,Brandon Lee,31,Male,Black,PhD,7,91,75,1,108000
+A009,Robert Taylor,30,Male,Black,Masters,5,84,68,0,0
+A007,Michael Brown,32,Male,White,PhD,8,95,88,1,115000
+A020,Michelle Garcia,25,Female,Hispanic,Bachelors,2,76,75,0,0
+A027,Justin Gonzalez,29,Male,Hispanic,Masters,5,84,70,0,0
+A006,Lisa Anderson,27,Female,White,Masters,4,87,85,1,92000
+A002,Maria Garcia,26,Female,Hispanic,Bachelors,3,88,75,0,0
+A021,Ryan Thompson,30,Male,Black,Masters,6,83,69,0,0
+A024,Laura Park,26,Female,Asian,Masters,3,87,82,1,90000
+A022,Nicole White,27,Female,White,Masters,4,88,86,1,93000
+A008,Jennifer Lee,24,Female,Asian,Bachelors,2,79,78,1,80000
+A023,Kevin Lopez,28,Male,Hispanic,Bachelors,4,81,71,0,0
+A028,Melissa Clark,27,Female,White,Masters,4,86,85,1,92000
+A026,Stephanie Harris,24,Female,White,Bachelors,2,78,80,1,83000
+A005,James Williams,29,Male,Black,Bachelors,4,82,70,0,0
+A011,Christopher Martinez,33,Male,White,PhD,9,96,92,1,120000
+A003,David Chen,31,Male,Asian,PhD,7,92,90,1,110000
+A029,Tyler Robinson,32,Male,White,PhD,8,93,88,1,114000
+A030,Rachel Walker,25,Female,Asian,Bachelors,3,80,77,1,81000
